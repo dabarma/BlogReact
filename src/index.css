@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.head .App-logo {
+  width: 100px;
+  height: 100px;
+}
+
+div.head {
+  margin-top: 10px;
+}
+.head > div:first-child {
+  text-align: left;
+}
+
+.head h1 {
+  margin-left: 20px;
+}
+
+.head > div:last-child {
+  text-align: center;
+}
+
+
+
