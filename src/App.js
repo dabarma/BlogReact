@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Head from './head.js';
+import Head from './components/head.js';
 import TablonEntradas from './TablonEntradas.js';
 
 function App() {
