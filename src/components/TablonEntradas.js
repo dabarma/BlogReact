@@ -21,8 +21,7 @@ class TablonEntradas extends React.Component{
         }
         
         return(
-            <div>
-                <h2>Numero de entradas: {this.props.entradas.length}</h2>
+            <div className="centrado">
                 {Entradas}
             </div>          
         );

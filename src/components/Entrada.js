@@ -7,9 +7,13 @@ class Entrada extends React.Component{
         console.log(this.props.email);
 
         return(
-            <div>
-                <p>email: {this.props.email}</p>
-                <p>texto: {this.props.texto}</p>
+            <div className="card">
+                <div className="card-title">
+                <span>{this.props.email}</span>
+                </div>
+                <div className="card-body">
+                    <span>{this.props.texto}</span>
+                </div>
             </div>
         );
     }

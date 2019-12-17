@@ -34,11 +34,12 @@ class Head extends React.Component{
             <div className="col-sm-6">
                 <h1>
                 <img src={logo} className="App-logo" alt="logo" />
-                    React Blog {this.props.name}
+                    React Blog 
                 </h1>
             </div>
             <div className="col-sm-6">
                 <h2>Son las {this.state.date.toLocaleTimeString()}.</h2>
+                <h2>Número de entradas: {this.props.numeroEntradas}</h2>
             </div>  
         </div>   
       );

@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -14,7 +12,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #cfdcf7;
   min-height: 100vh;
   align-items: center;
   font-size: calc(10px + 2vmin);

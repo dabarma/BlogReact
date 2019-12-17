@@ -12,6 +12,22 @@ code {
     monospace;
 }
 
+h1 {
+  color: #5f5d5d;
+}
+
+h2 {
+  color: #5f5d5d;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.botonMenu {
+  margin: 10px;
+}
+
 .head .App-logo {
   width: 100px;
   height: 100px;
@@ -31,6 +47,31 @@ div.head {
 .head > div:last-child {
   text-align: center;
 }
+
+.card {
+  margin: 10px;
+  text-align: left;
+}
+
+.card-title span{
+  color:grey;
+  margin-left: 10px;
+  font-size: large;
+}
+
+.card-body {
+  padding: 0.75rem !important;
+}
+
+.card-body span {
+  color: #909090;
+}
+
+form {
+  margin: 20px;
+}
+
+
 
 
 

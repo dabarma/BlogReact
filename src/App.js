@@ -28,7 +28,7 @@ class App extends React.Component{
     if(!this.state.nuevaEntrada)
     {
       return(
-        <button onClick={this.nuevaEntradaClick}>
+        <button className="btn btn-light botonMenu" onClick={this.nuevaEntradaClick}>
           Nueva entrada
         </button>
         );
@@ -54,7 +54,7 @@ class App extends React.Component{
 
     return (
       <div className="App">
-        <Head name="David" />
+        <Head numeroEntradas={this.state.entradas? this.state.entradas.length : 0} />
         <header className="App-header">
           <div className="row">
             <div className="col-sm-12">

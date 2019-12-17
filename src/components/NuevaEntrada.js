@@ -38,7 +38,7 @@ class NuevaEntrada extends React.Component{
                             <label>Texto:</label>
                             <textarea className="form-control" id="textoTextArea" rows="3" onChange={this.textoChangeHandler}></textarea>
                         </div>
-                        <button onClick={() => this.props.data(this.state)}>Guardar entrada</button>
+                        <button className="btn btn-light" onClick={() => this.props.data(this.state)}>Guardar entrada</button>
                     </form>                   
                 </div>
             );
