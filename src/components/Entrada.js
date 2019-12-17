@@ -9,10 +9,13 @@ class Entrada extends React.Component{
         return(
             <div className="card">
                 <div className="card-title">
-                <span>{this.props.email}</span>
+                    <div className="derecha">
+                        <span>{this.props.email}</span>
+                    </div>
+                    <h2 className="centrado">{this.props.titulo}</h2>
                 </div>
-                <div className="card-body">
-                    <span>{this.props.texto}</span>
+                <div className="card-body izquierda" dangerouslySetInnerHTML={{ __html: this.props.texto }}>
+
                 </div>
             </div>
         );

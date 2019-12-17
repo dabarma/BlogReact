@@ -45,7 +45,7 @@ class App extends React.Component{
 
       this.setState({
         nuevaEntrada: false,
-        entradas: entradas.concat(value)
+        entradas: [value].concat(entradas)
       });
   }
 
