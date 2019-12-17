@@ -2,31 +2,7 @@ import React from 'react';
 import logo from '../logo.svg';
 
 class Head extends React.Component{
-  
-    constructor(props){
-      super(props);
-      this.state = {
-        date: new Date(),
-      };
-    }
-  
-    componentDidMount(){
-      this.timerID = setInterval(
-        ()=> this.tick(),
-        1000
-      );
-    }
-  
-    tick(){
-      this.setState({
-        date: new Date()
-      });
-    }
-  
-    componentWillUnmount(){
-      clearInterval(this.timerID);
-    }
-   
+    
     render(){
       return (
         <div className="head row">
@@ -37,8 +13,7 @@ class Head extends React.Component{
                     React Blog 
                 </h1>
             </div>
-            <div className="col-sm-6">
-                <h2>Son las {this.state.date.toLocaleTimeString()}.</h2>
+            <div className="col-sm-6 align-self-center">
                 <h2>Número de entradas: {this.props.numeroEntradas}</h2>
             </div>  
         </div>   

@@ -13,11 +13,11 @@
 
 .App-header {
   background-color: #cfdcf7;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(127, 193, 202));
   min-height: 100vh;
   align-items: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-  padding-top: 10px;
+  color: rgb(82, 76, 76);
 }
 
 .App-link {

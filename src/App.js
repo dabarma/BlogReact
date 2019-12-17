@@ -15,6 +15,7 @@ class App extends React.Component{
 
     this.nuevaEntradaClick = this.nuevaEntradaClick.bind(this);
     this.insertarNuevaEntrada = this.insertarNuevaEntrada.bind(this);
+    this.cancelarNuevaEntrada = this.cancelarNuevaEntrada.bind(this);
   }
 
   nuevaEntradaClick(){
@@ -42,12 +43,18 @@ class App extends React.Component{
 
       let entradas = this.state.entradas.slice();
 
-      console.log(value);
-
       this.setState({
         nuevaEntrada: false,
         entradas: entradas.concat(value)
       });
+  }
+
+  cancelarNuevaEntrada(){
+
+    this.setState({
+      nuevaEntrada: false
+    });
+
   }
 
   render(){
@@ -63,7 +70,7 @@ class App extends React.Component{
           </div>
           <div className="row mt-2">
             <div className="col-sm-12">
-              <NuevaEntrada data={this.insertarNuevaEntrada} visible={this.state.nuevaEntrada}></NuevaEntrada>
+              <NuevaEntrada data={this.insertarNuevaEntrada} cancelar={this.cancelarNuevaEntrada} visible={this.state.nuevaEntrada}></NuevaEntrada>
               <TablonEntradas entradas={this.state.entradas} visible={!this.state.nuevaEntrada} />
             </div>
           </div>

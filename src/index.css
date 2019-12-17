@@ -12,16 +12,24 @@ code {
     monospace;
 }
 
-h1 {
+.head h1 {
   color: #5f5d5d;
 }
 
-h2 {
+.head h2 {
   color: #5f5d5d;
+  font-size: 1.5rem;
 }
 
 .centrado {
   text-align: center;
+}
+
+.btn {
+  margin-right: 5px;
+  border-color: #789ce8 !important;
+  background-color: transparent !important;
+  color: #5f5d5d !important;
 }
 
 .botonMenu {
