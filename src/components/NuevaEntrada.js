@@ -63,7 +63,7 @@ class NuevaEntrada extends React.Component{
                                 } }
                             />
                         </div>
-                        <button type="submit" className="btn btn-light" onClick={() => this.props.data(this.state)}>Guardar entrada</button>
+                        <button type="button" className="btn btn-light" onClick={() => this.props.data(this.state)}>Guardar entrada</button>
                         <button className="btn btn-light" onClick={() => this.props.cancelar()}>Cancelar</button>
                     </form>                   
                 </div>
