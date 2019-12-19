@@ -14,7 +14,7 @@ class Head extends React.Component{
                 </h1>
             </div>
             <div className="col-sm-6 align-self-center">
-                <h2>Número de entradas: {this.props.numeroEntradas}</h2>
+                {/* <h2>Número de entradas: {this.props.numeroEntradas}</h2> */}
             </div>  
         </div>   
       );

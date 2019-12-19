@@ -13,11 +13,24 @@
 
 .App-header {
   background-color: #cfdcf7;
-  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(127, 193, 202));
+  background-image: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(236,236,238,1) 100%);
   min-height: 100vh;
   align-items: center;
   font-size: calc(5px + 2vmin);
   color: rgb(82, 76, 76);
+  margin-bottom: 45px;
+}
+
+.App-footer {
+  background-color: #bebebe;
+  color: grey;
+  font-size: 0.9em;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .App-link {

@@ -13,7 +13,7 @@ class TablonEntradas extends React.Component{
         let Entradas;
         if(this.props.entradas.length===0)
         {
-            Entradas = <p>No hay entradas disponibles</p>
+            Entradas = <div className="centrado"><p>No hay entradas disponibles</p></div>;
         }
         else{
 

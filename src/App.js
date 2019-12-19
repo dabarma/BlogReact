@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Head from './components/Head.js';
+import Footer from './components/Footer.js';
 import TablonEntradas from './components/TablonEntradas.js';
 import NuevaEntrada from './components/NuevaEntrada.js';
 
@@ -75,6 +76,7 @@ class App extends React.Component{
             </div>
           </div>
         </header>
+        <Footer />
       </div>
     );
 

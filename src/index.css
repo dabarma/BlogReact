@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
 .head h1 {
   color: #5f5d5d;
 }
@@ -23,6 +28,7 @@ code {
 
 .centrado {
   text-align: center;
+  width: 100%;
 }
 
 .izquierda {
@@ -47,11 +53,16 @@ code {
 
 .head .App-logo {
   width: 100px;
-  height: 100px;
+  height: 200px;
 }
 
 div.head {
-  margin-top: 10px;
+  margin-top: 5px;
+  background: url('/bench-accounting-nvzvOPQW0gc-unsplash.jpg') no-repeat top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .head > div:first-child {
   text-align: left;
@@ -78,6 +89,7 @@ div.head {
   min-height: 300px;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  
 }
 
 .card:nth-child(1) {
@@ -94,7 +106,7 @@ div.head {
 
 .card-title {
   text-align: left;
-  background-color: rgb(241, 241, 241);
+  background-color: #b3bbc4;
 }
 
 .card-title span{
