@@ -9,18 +9,6 @@ class App extends React.Component{
 
   constructor(props){
     super(props);
-    this.state = {
-      entradas: [],
-      nuevaEntrada: false,
-    } 
-
-    this.nuevaEntradaClick = this.nuevaEntradaClick.bind(this);
-    this.insertarNuevaEntrada = this.insertarNuevaEntrada.bind(this);
-    this.cancelarNuevaEntrada = this.cancelarNuevaEntrada.bind(this);
-  }
-
-  componentDidMount() {
-
 
     const entradasIniciales = [
       { 
@@ -46,10 +34,14 @@ class App extends React.Component{
 
     ];
 
-    this.setState({
-      entradas: entradasIniciales
-    });
+    this.state = {
+      entradas: entradasIniciales,
+      nuevaEntrada: false,
+    } 
 
+    this.nuevaEntradaClick = this.nuevaEntradaClick.bind(this);
+    this.insertarNuevaEntrada = this.insertarNuevaEntrada.bind(this);
+    this.cancelarNuevaEntrada = this.cancelarNuevaEntrada.bind(this);
   }
 
   nuevaEntradaClick(){
