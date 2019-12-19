@@ -7,7 +7,7 @@ class Entrada extends React.Component{
         console.log(this.props.email);
 
         return(
-            <div className="card">
+            <div className="card fade-in">
                 <div className="card-title">
                     <div className="derecha">
                         <span>{this.props.email}</span>
