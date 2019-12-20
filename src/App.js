@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+  Switch,
+  Route,
+  Link,
+  withRouter
+} from "react-router-dom";
+
 import './App.css';
 import Head from './components/Head.js';
 import Footer from './components/Footer.js';
@@ -36,33 +43,10 @@ class App extends React.Component{
 
     this.state = {
       entradas: entradasIniciales,
-      nuevaEntrada: false,
     } 
 
-    this.nuevaEntradaClick = this.nuevaEntradaClick.bind(this);
     this.insertarNuevaEntrada = this.insertarNuevaEntrada.bind(this);
-    this.cancelarNuevaEntrada = this.cancelarNuevaEntrada.bind(this);
-  }
 
-  nuevaEntradaClick(){
-    this.setState({
-      nuevaEntrada: true
-    });
-  }
-
-  renderBotonNuevo(){
-
-    if(!this.state.nuevaEntrada)
-    {
-      return(
-        <button className="btn btn-light botonMenu" onClick={this.nuevaEntradaClick}>
-          Nueva entrada
-        </button>
-        );
-    }else
-    {
-      return("");
-    }
   }
 
   insertarNuevaEntrada(value){
@@ -73,14 +57,8 @@ class App extends React.Component{
         nuevaEntrada: false,
         entradas: [value].concat(entradas)
       });
-  }
 
-  cancelarNuevaEntrada(){
-
-    this.setState({
-      nuevaEntrada: false
-    });
-
+      this.props.history.push('/');
   }
 
   render(){
@@ -89,24 +67,33 @@ class App extends React.Component{
       <div className="App">
         <Head numeroEntradas={this.state.entradas? this.state.entradas.length : 0} />
         <header className="App-header">
-          <div className="row">
-            <div className="col-sm-12">
-              {this.renderBotonNuevo()}
-            </div>
-          </div>
-          <div className="row mt-2">
-            <div className="col-sm-12">
-              <NuevaEntrada data={this.insertarNuevaEntrada} cancelar={this.cancelarNuevaEntrada} visible={this.state.nuevaEntrada}></NuevaEntrada>
-              <TablonEntradas entradas={this.state.entradas} visible={!this.state.nuevaEntrada} />
-            </div>
-          </div>
+           <Switch>
+            <Route path="/nuevo">
+              <div className="row mt-2">
+                <div className="col-sm-12">
+                  <NuevaEntrada data={this.insertarNuevaEntrada}></NuevaEntrada>
+                </div>
+              </div>
+            </Route>
+            <Route path="/">
+              <div className="row">
+                <div className="col-sm-12">
+                  <Link className="btn btn-light botonMenu" to="/nuevo">Nueva entrada</Link>
+                </div>
+              </div>
+              <div className="row mt-2">
+                <div className="col-sm-12">
+                  <TablonEntradas entradas={this.state.entradas} />
+                </div>
+              </div>
+            </Route>
+            </Switch>
         </header>
         <Footer />
       </div>
     );
-
   }
-
+  
 }
 
-export default App;
+export default withRouter(App);

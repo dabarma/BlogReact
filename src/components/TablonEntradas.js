@@ -4,12 +4,7 @@ import Entrada from './Entrada';
 class TablonEntradas extends React.Component{
 
     render(){
-
-        if(!this.props.visible){
-            return(<div></div>);
-        }
-
-       
+   
         let Entradas;
         if(this.props.entradas.length===0)
         {
