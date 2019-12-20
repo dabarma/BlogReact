@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../logo.svg';
+import { Link } from 'react-router-dom';
 
 class Head extends React.Component{
     
@@ -10,7 +11,9 @@ class Head extends React.Component{
             <div className="col-sm-6">
                 <h1>
                 <img src={logo} className="App-logo" alt="logo" />
+                  <Link to="/">
                     React Blog 
+                  </Link>
                 </h1>
             </div>
             <div className="col-sm-6 align-self-center">

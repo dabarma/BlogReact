@@ -72,6 +72,11 @@ div.head {
   margin-left: 20px;
 }
 
+.head h1 a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+}
+
 .head > div:last-child {
   text-align: center;
 }
@@ -86,7 +91,8 @@ div.head {
   margin: 10px;
 
   flex-basis: calc(33.33% - 20px);
-  min-height: 300px;
+  min-height: 250px;
+  max-height: 250px;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
   

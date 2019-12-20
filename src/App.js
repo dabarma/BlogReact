@@ -68,25 +68,28 @@ class App extends React.Component{
         <Head numeroEntradas={this.state.entradas? this.state.entradas.length : 0} />
         <header className="App-header">
            <Switch>
-            <Route path="/nuevo">
-              <div className="row mt-2">
-                <div className="col-sm-12">
-                  <NuevaEntrada data={this.insertarNuevaEntrada}></NuevaEntrada>
-                </div>
-              </div>
-            </Route>
-            <Route path="/">
+            <Route path="/" exact>
               <div className="row">
                 <div className="col-sm-12">
                   <Link className="btn btn-light botonMenu" to="/nuevo">Nueva entrada</Link>
                 </div>
-              </div>
-              <div className="row mt-2">
-                <div className="col-sm-12">
-                  <TablonEntradas entradas={this.state.entradas} />
                 </div>
-              </div>
-            </Route>
+                <div className="row mt-2">
+                  <div className="col-sm-12">
+                    <TablonEntradas entradas={this.state.entradas} />
+                  </div>
+                </div>
+              </Route>
+              <Route path="/nuevo" exact>
+                <div className="row mt-2">
+                  <div className="col-sm-12">
+                    <NuevaEntrada data={this.insertarNuevaEntrada}></NuevaEntrada>
+                  </div>
+                </div>
+              </Route>
+              <Route path="/entrada/:id" exact>
+                <p>hola</p>                
+              </Route>
             </Switch>
         </header>
         <Footer />

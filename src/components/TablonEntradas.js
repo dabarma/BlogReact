@@ -12,7 +12,7 @@ class TablonEntradas extends React.Component{
         }
         else{
 
-            Entradas = this.props.entradas.map((d,index) => <Entrada key={index} email={d.email} texto={d.texto} titulo={d.titulo} />);
+            Entradas = this.props.entradas.map((d,index) => <Entrada key={index} id={index} email={d.email} texto={d.texto} titulo={d.titulo} />);
         }
         
         return(

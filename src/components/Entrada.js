@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Entrada extends React.Component{
 
@@ -14,8 +15,11 @@ class Entrada extends React.Component{
                     </div>
                     <h2 className="centrado">{this.props.titulo}</h2>
                 </div>
-                <div className="card-body izquierda" dangerouslySetInnerHTML={{ __html: this.props.texto }}>
+                <div className="card-body izquierda textoEntrada" dangerouslySetInnerHTML={{ __html: this.props.texto }}>
 
+                </div>
+                <div class="card-body">
+                    <Link to={"/entrada/" + this.props.id }>Leer más</Link>
                 </div>
             </div>
         );
