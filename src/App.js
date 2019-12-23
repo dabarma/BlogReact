@@ -11,6 +11,7 @@ import Head from './components/Head.js';
 import Footer from './components/Footer.js';
 import TablonEntradas from './components/TablonEntradas.js';
 import NuevaEntrada from './components/NuevaEntrada.js';
+import EntradaDetalle from './components/EntradaDetalle.js';
 
 class App extends React.Component{
 
@@ -87,8 +88,7 @@ class App extends React.Component{
                   </div>
                 </div>
               </Route>
-              <Route path="/entrada/:id" exact>
-                <p>hola</p>                
+              <Route path="/entrada/:id" exact component={EntradaDetalle} >           
               </Route>
             </Switch>
         </header>
@@ -98,5 +98,14 @@ class App extends React.Component{
   }
   
 }
+
+/*function DetalleEntrada(){
+
+  let { id } = useParams();
+
+  return(
+    <p>{id}</p>
+  );
+}*/
 
 export default withRouter(App);
