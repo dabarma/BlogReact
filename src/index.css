@@ -137,6 +137,23 @@ form {
   min-height: 400px !important;
 }
 
+.detalleEntrada{
+  margin-left: 10px;
+}
+
+.detalleEntrada h1{
+  margin-bottom: 20px;
+}
+
+.detalleEntrada .email{
+  margin-bottom: 20px;
+  color: #909090;
+}
+
+.detalleEntrada .textoEntrada{
+  margin-top: 40px;
+}
+
 
 
 
