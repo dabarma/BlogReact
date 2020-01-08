@@ -8,7 +8,7 @@ class Head extends React.Component{
       return (
         <div className="head row">
             
-            <div className="col-sm-6">
+            <div className="col-sm-8">
                 <h1>
                 <img src={logo} className="App-logo" alt="logo" />
                   <Link to="/">
