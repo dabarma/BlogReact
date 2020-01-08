@@ -87,28 +87,49 @@ div.head {
   align-items: stretch;
 }
 
-.card {
-  margin: 10px;
 
-  flex-basis: calc(33.33% - 20px);
-  min-height: 250px;
-  max-height: 250px;
-  border: 1px solid #ccc;
-  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+
+@media only screen and (min-width: 768px) {
+
+  .card {
+    margin: 10px;
   
+    flex-basis: calc(33.33% - 20px);
+    min-height: 250px;
+    max-height: 250px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    
+  }
+
+  .card:nth-child(1) {
+    flex-basis: calc(100% - 20px);
+  }
+  
+  .card:nth-child(2) {
+    flex-basis: calc(50% - 20px);
+  }
+  
+  .card:nth-child(3) {
+    flex-basis: calc(50% - 20px);
+  }
+
+
 }
 
-.card:nth-child(1) {
-  flex-basis: calc(100% - 20px);
+
+@media only screen and (max-width: 768px) {
+  .card {
+    margin: 10px;
+    flex-basis: calc(100% - 20px);
+    min-height: 250px;
+    max-height: 250px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  }
 }
 
-.card:nth-child(2) {
-  flex-basis: calc(50% - 20px);
-}
 
-.card:nth-child(3) {
-  flex-basis: calc(50% - 20px);
-}
 
 .card-title {
   text-align: left;
@@ -123,6 +144,10 @@ div.head {
 
 .card-body {
   padding: 0.75rem !important;
+}
+
+.card-body-footer{
+  min-height: 30px;
 }
 
 .card-body span {

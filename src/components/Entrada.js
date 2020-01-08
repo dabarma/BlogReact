@@ -18,7 +18,7 @@ class Entrada extends React.Component{
                 <div className="card-body izquierda textoEntrada" dangerouslySetInnerHTML={{ __html: this.props.texto }}>
 
                 </div>
-                <div className="card-body">
+                <div className="card-body-footer">
                     <Link to={"/entrada/" + this.props.id }>Leer más</Link>
                 </div>
             </div>
