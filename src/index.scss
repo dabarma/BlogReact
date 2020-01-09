@@ -1,3 +1,5 @@
+@import "./colors.scss";
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,20 +12,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.row {
-  margin-right: 0px !important;
-  margin-left: 0px !important;
-}
-
-.head h1 {
-  color: #5f5d5d;
-}
-
-.head h2 {
-  color: #5f5d5d;
-  font-size: 1.5rem;
 }
 
 .centrado {
@@ -40,21 +28,37 @@ code {
   margin-right: 10px;
 }
 
-.btn {
-  margin-right: 5px;
-  border-color: #789ce8 !important;
-  background-color: transparent !important;
-  color: #5f5d5d !important;
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
 }
 
-.botonMenu {
-  margin: 10px;
-}
+.head {
 
-.head .App-logo {
-  width: 100px;
-  height: 200px;
-}
+  h1 {
+    color: $grisfuerte;
+    margin-left: 20px;
+
+    a {
+      color: inherit; /* blue colors for links too */
+      text-decoration: inherit; /* no underline */
+    }
+  }
+
+  h2 {
+    color: $grisfuerte;
+    font-size: 1.5rem;
+  }
+
+  .App-logo {
+    width: 100px;
+    height: 200px;
+  }
+
+  > div:first-child {
+    text-align: left;
+  }
+} 
 
 div.head {
   margin-top: 5px;
@@ -64,21 +68,16 @@ div.head {
   -o-background-size: cover;
   background-size: cover;
 }
-.head > div:first-child {
-  text-align: left;
+
+.btn {
+  margin-right: 5px;
+  border-color: $colorbordeboton !important;
+  background-color: transparent !important;
+  color: $grisfuerte !important;
 }
 
-.head h1 {
-  margin-left: 20px;
-}
-
-.head h1 a {
-    color: inherit; /* blue colors for links too */
-    text-decoration: inherit; /* no underline */
-}
-
-.head > div:last-child {
-  text-align: center;
+.botonMenu {
+  margin: 10px;
 }
 
 .cards {
@@ -86,8 +85,6 @@ div.head {
   flex-wrap: wrap;
   align-items: stretch;
 }
-
-
 
 @media only screen and (min-width: 768px) {
 
@@ -99,24 +96,21 @@ div.head {
     max-height: 250px;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+
+    &:nth-child(1) {
+      flex-basis: calc(100% - 20px);
+    }
+
+    &:nth-child(2) {
+      flex-basis: calc(50% - 20px);
+    }
+
+    &:nth-child(3) {
+      flex-basis: calc(50% - 20px);
+    }
     
   }
-
-  .card:nth-child(1) {
-    flex-basis: calc(100% - 20px);
-  }
-  
-  .card:nth-child(2) {
-    flex-basis: calc(50% - 20px);
-  }
-  
-  .card:nth-child(3) {
-    flex-basis: calc(50% - 20px);
-  }
-
-
 }
-
 
 @media only screen and (max-width: 768px) {
   .card {
@@ -129,29 +123,27 @@ div.head {
   }
 }
 
-
-
 .card-title {
   text-align: left;
-  background-color: #8da6c256;
-}
+  background-color: $colorcabeceratarjetas;
 
-.card-title span{
-  color:grey;
-  margin-left: 10px;
-  font-size: 1em;
+  span {
+    color:grey;
+    margin-left: 10px;
+    font-size: 1em;
+  }
 }
 
 .card-body {
   padding: 0.75rem !important;
+
+  span {
+    color: $grisclaro;
+  }
 }
 
 .card-body-footer{
   min-height: 30px;
-}
-
-.card-body span {
-  color: #909090;
 }
 
 form {
@@ -164,21 +156,25 @@ form {
 
 .detalleEntrada{
   margin-left: 10px;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  .email {
+    margin-bottom: 20px;
+    color: $grisclaro;
+  }
+
+  .textoEntrada {
+    margin-top: 40px;
+  }
 }
 
-.detalleEntrada h1{
-  margin-bottom: 20px;
+.textoEntrada{
+  overflow: hidden;         /*prevent text from being shown outside the border */
+  text-overflow: ellipsis;  /*cut off text with an ellipsis*/
 }
-
-.detalleEntrada .email{
-  margin-bottom: 20px;
-  color: #909090;
-}
-
-.detalleEntrada .textoEntrada{
-  margin-top: 40px;
-}
-
 
 
 

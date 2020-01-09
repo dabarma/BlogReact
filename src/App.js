@@ -6,7 +6,7 @@ import {
   withRouter
 } from "react-router-dom";
 
-import './App.css';
+import './App.scss';
 import ServiceApi from './services/ServiceApi.js';
 import Head from './components/Head.js';
 import Footer from './components/Footer.js';
