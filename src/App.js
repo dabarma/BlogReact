@@ -8,11 +8,14 @@ import {
 
 import './App.scss';
 import ServiceApi from './services/ServiceApi.js';
+import ServiceAuth from './services/ServiceAuth.js';
+
 import Head from './components/Head.js';
 import Footer from './components/Footer.js';
 import TablonEntradas from './components/TablonEntradas.js';
 import NuevaEntrada from './components/NuevaEntrada.js';
 import EntradaDetalle from './components/EntradaDetalle.js';
+import Login from './components/Login.js';
 
 class App extends React.Component{
 
@@ -23,9 +26,11 @@ class App extends React.Component{
 
     this.state = {
       entradas: [],
+      logged: ServiceAuth.autenticated()
     } 
 
     this.insertarNuevaEntrada = this.insertarNuevaEntrada.bind(this);
+    this.goToHome = this.goToHome.bind(this);
 
   }
 
@@ -52,6 +57,42 @@ class App extends React.Component{
       this.props.history.push('/');    
   }
 
+  goToHome(){
+    this.props.history.push('/');   
+  }
+
+  LogOut(){
+    ServiceAuth.logOut();
+    this.setState({logged: false});
+  }
+
+  RenderBotonera(){
+     
+    if(this.state.logged){
+      return this.renderBotoneraLoggedIn();
+    } else {
+      return this.renderBotoneraNotLoggedIn();
+    }
+
+  }
+
+  renderBotoneraLoggedIn(){
+    return(
+      <div className="col-sm-12">
+        <Link className="btn btn-light botonMenu" to="/nuevo">Nueva entrada</Link>
+        <input type="button" className="btn btn-light" value="Cerrar sesión" onClick={() => this.LogOut()}></input>
+      </div>
+    );               
+  }
+
+  renderBotoneraNotLoggedIn(){
+    return(
+      <div className="col-sm-12">
+        <Link className="btn btn-light botonMenu" to="/login">Iniciar sesión</Link>
+      </div>
+    );
+  }
+
   render(){
 
     return (
@@ -61,13 +102,18 @@ class App extends React.Component{
            <Switch>
             <Route path="/" exact>
               <div className="row">
-                <div className="col-sm-12">
-                  <Link className="btn btn-light botonMenu" to="/nuevo">Nueva entrada</Link>
-                </div>
+                {this.RenderBotonera()}
                 </div>
                 <div className="row mt-2">
                   <div className="col-sm-12">
                     <TablonEntradas entradas={this.state.entradas} />
+                  </div>
+                </div>
+              </Route>
+              <Route path="/login" exact>
+                <div className="row mt-2">
+                  <div className="col-sm-12">
+                    <Login back={this.goToHome}></Login>
                   </div>
                 </div>
               </Route>
